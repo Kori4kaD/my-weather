@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KoricaWeather</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h2>MY WEATHER</h2>
+          <form id="searchForm">
+            <div class="search">
+              <input id="search" value="" />
+              <img id="submitButton" src="images/search.png" alt="Submit" width="20px"/>
+            </div>
+          </form>
+          
+        </div>
+        <div class="select__day">
+          
+          <div class="activeBtn" id="todayPage" onclick="togglePage('today')">Today</div>
+          <div id="fiveDaysPage" onclick="togglePage('5day')">5-day forecast</div>
+        </div>
+      </div>
+      
+    </header>
+    <main>
+      <div id="today" class="container today activePage">
+        <div class="weather__current" id="weather">
+          <div id="error"></div>
+        </div>
+        <div id="hourlyBlock" class="hourly">
+         
+        </div>
+
+      </div>
+
+      <div id="5day" class="container five_day">
+        <div class="weather5day" id="weather5day"></div>
+        <div class="hourly5day" id="hourlyBlock5days"></div>
+      </div>
+      
+    </main>
+
+    <script src="JS/index.js"></script>
+    <script src="JS/search.js"></script>
+    <script src="JS/getApi.js"></script>
+    <script src="JS/date_time.js"></script>
+    <script src="JS/onclick_func.js"></script>
+
+  </body>
+</html>
